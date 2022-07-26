@@ -10,10 +10,11 @@ const App = () => {
 	const [assets] = useFetch("http://localhost:8080/assets");
 	const [data, setData] = useState({});
 	const [isSignedIn, setIsSignedIn] = useState(false);
+	const [plan, setPlan] = useState(false);
 
 	return (
 		<BrowserRouter>
-			<DefaultContext.Provider value={{assets, isSignedIn}}>
+			<DefaultContext.Provider value={{assets, isSignedIn, plan}}>
 				<Routers />
 			</DefaultContext.Provider>
 		</BrowserRouter>
