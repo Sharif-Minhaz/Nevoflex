@@ -1,11 +1,13 @@
+require("dotenv").config();
 const express = require("express");
 const app = express();
-require("dotenv").config();
 const mongoose = require("mongoose");
 const setMiddlewares = require("./middlewares/middlewares");
+const setRoutes = require("./routers/routes");
 
-//set middlewares
+//set middlewares and routes
 setMiddlewares(app);
+setRoutes(app);
 
 const PORT = process.env.PORT || 8080;
 

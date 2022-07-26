@@ -1,0 +1,36 @@
+.headerSection {
+	height: 100vh;
+}
+.header {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	max-height: 100vh;
+	min-height: 625px;
+}
+.wrapper {
+	min-height: inherit;
+	max-height: inherit;
+	background-color: rgba(0, 0, 0, 0.4);
+}
+.nav {
+	height: 80px;
+	padding: 25px 50px;
+	display: flex;
+	justify-content: space-between;
+}
+.nav img {
+	width: 145px;
+	height: 45px;
+}
+.signBtn {
+	background-color: #e50914;
+	color: white;
+	padding: 6px 18px;
+	vertical-align: middle;
+	cursor: pointer;
+	border-radius: 4px;
+	font-size: 16px;
+	height: 35px;
+	border: none;
+}

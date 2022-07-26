@@ -5,7 +5,12 @@ export const useFetch = (url) => {
 	const [data, setData] = useState(null);
 
 	useEffect(() => {
-		axios.get(url).then((data) => setData(data));
+		axios
+			.get(url)
+			.then((response) => setData(response.data))
+			.catch((err) => {
+				console.error(err);
+			});
 	}, [url]);
 
 	return [data];
