@@ -48,6 +48,9 @@
 	width: 614px;
 	color: white;
 }
+.introWrapper {
+	padding: 0px 25px;
+}
 .introSection .introWrapper h1 {
 	font-size: 3.125rem;
 	text-align: center;
@@ -71,18 +74,19 @@
 	height: 60px;
 	min-width: 450px;
 	width: 100%;
-	padding: 10px;
+	padding: 10px 14px;
 	border-bottom-left-radius: 4px;
 	border-top-left-radius: 4px;
 	border: none;
 	box-shadow: none;
 	outline: none;
 	font-size: 18px;
+	transition: all 0.2s;
 }
 .signupForm input:focus,
 .signupForm input:focus-visible {
 	border: none;
-	box-shadow: none;
+	box-shadow: -2px 0px 9px 4px #64a4fe;
 	outline: none;
 }
 .inputArea {
@@ -102,10 +106,115 @@
 	white-space: nowrap;
 	border-radius: 4px;
 }
+.redBtn:focus {
+	box-shadow: -2px 0px 9px 4px #64a4fe;
+}
 .edgedBorder {
 	border-bottom-left-radius: 0px;
 	border-top-left-radius: 0px;
 }
 .redBtn:hover {
 	background-color: #f40612;
+}
+
+/* Enjoy on your TV section */
+.enjoyTvSection {
+	background-color: #000000;
+	color: white;
+	display: flex;
+	padding: 100px 130px;
+	gap: 60px;
+	place-items: center;
+}
+.writtenSection {
+	flex-basis: 50%;
+	padding-right: 30px;
+}
+.writtenSection h1 {
+	font-size: 3.125rem;
+	line-height: 1.1;
+	margin-bottom: 1.5rem;
+}
+.writtenSection h2 {
+	font-size: 1.625rem;
+	font-weight: 400;
+	line-height: 1.3;
+}
+
+.tvContainer {
+	flex-basis: 50%;
+	display: flex;
+	align-items: center;
+}
+.tvBox {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+}
+.tv {
+	position: absolute;
+	width: 521px;
+	height: 369px;
+}
+
+/* .tvVideoSection {
+} */
+.tvVideo {
+	width: 382px;
+}
+
+@media (max-width: 1227px) {
+	.writtenSection h1 {
+		font-size: 2.525rem;
+	}
+	.writtenSection h2 {
+		font-size: 1.3rem;
+	}
+}
+
+@media (max-width: 999px) {
+	.enjoyTvSection {
+		flex-direction: column;
+		padding: 80px 50px;
+		justify-content: center;
+		align-items: center;
+	}
+	.writtenSection {
+		margin-bottom: 17px;
+	}
+	.writtenSection h1 {
+		text-align: center;
+	}
+	.writtenSection h2 {
+		text-align: center;
+	}
+}
+
+@media (max-width: 767px) {
+	.nav {
+		padding: 25px;
+	}
+	.inputArea {
+		flex-direction: column;
+		align-items: center;
+		gap: 17px;
+	}
+	.inputArea button[type="submit"] {
+		border-radius: 5px;
+	}
+}
+
+@media (max-width: 590px) {
+	.introSection .introWrapper {
+		width: 100%;
+	}
+	.tv {
+		width: 396px;
+		height: 282px;
+	}
+	.tvVideo {
+		width: 292px;
+	}
 }

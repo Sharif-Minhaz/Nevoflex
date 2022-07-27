@@ -1,10 +1,8 @@
-import React, { useContext } from "react";
-import { DefaultContext } from "../../contexts/DefaultContext";
+import React from "react";
 import styles from "./home.module.css";
 import SignInInput from "./SignInInput";
 
-const Header = () => {
-	const { assets, isSignedIn, plan } = useContext(DefaultContext);
+const Header = ({ assets, isSignedIn, plan }) => {
 	return (
 		<div className={styles.header} style={{ backgroundImage: `url(${assets?.images?.[1]})` }}>
 			<div className={styles.wrapper}>
