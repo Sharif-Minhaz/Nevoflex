@@ -134,13 +134,15 @@
 	padding-right: 30px;
 }
 .writtenSection h1,
-.sideWaysIntro h1 {
+.sideWaysIntro h1,
+.watchEveryWhere h1 {
 	font-size: 3.125rem;
 	line-height: 1.1;
 	margin-bottom: 1.5rem;
 }
 .writtenSection h2,
-.sideWaysIntro h2 {
+.sideWaysIntro h2,
+.watchEveryWhere h2 {
 	font-size: 1.625rem;
 	font-weight: 400;
 	line-height: 1.3;
@@ -182,18 +184,28 @@
 .downloadSection .downloadBox {
 	flex-basis: 50%;
 }
-/* .sideWaysIntro h1 {
+/* watch every where section  */
+.watchEveryWhere {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	justify-content: center;
+	background-color: #000000;
+	color: white;
+	border-bottom: 10px solid #222;
+	padding: 60px 130px;
 }
-.sideWaysIntro h2 {
-} */
 
 @media (max-width: 1227px) {
 	.writtenSection h1,
-	.sideWaysIntro h1 {
+	.sideWaysIntro h1,
+	.watchEveryWhere h1 {
 		font-size: 2.525rem;
 	}
 	.writtenSection h2,
-	.sideWaysIntro h2 {
+	.sideWaysIntro h2,
+	.watchEveryWhere h2 {
 		font-size: 1.3rem;
 	}
 }
@@ -232,16 +244,19 @@
 
 @media (max-width: 767px) {
 	.enjoyTvSection,
-	.downloadSection {
+	.downloadSection,
+	.watchEveryWhere {
 		padding: 60px 25px;
 	}
 	.introWrapper h1,
 	.writtenSection h1,
+	.watchEveryWhere h1,
 	.sideWaysIntro h1 {
 		font-size: 1.625rem !important;
 	}
 	.introWrapper h2,
 	.writtenSection h2,
+	.watchEveryWhere h2,
 	.sideWaysIntro h2 {
 		font-size: 1.125rem !important;
 	}
@@ -287,8 +302,10 @@
 		height: 45px;
 		font-size: 1rem;
 	}
+	.breakTxt {
+		display: none;
+	}
 }
-
 @media (max-width: 430px) {
 	.enjoyTvSection {
 		gap: 30px;
