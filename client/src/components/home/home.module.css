@@ -47,7 +47,7 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	width: 614px;
+	width: 675px;
 	color: white;
 }
 .introWrapper {
@@ -135,7 +135,8 @@
 }
 .writtenSection h1,
 .sideWaysIntro h1,
-.watchEveryWhere h1 {
+.watchEveryWhere h1,
+.faqSection h1 {
 	font-size: 3.125rem;
 	line-height: 1.1;
 	margin-bottom: 1.5rem;
@@ -197,10 +198,79 @@
 	padding: 60px 130px;
 }
 
+/* FAQ section */
+.faqSection {
+	background-color: #000000;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	padding: 70px 50px;
+	gap: 55px;
+	border-bottom: 10px solid #222;
+	justify-content: center;
+	align-items: center;
+}
+.faqSection .wrapper {
+	width: 830px;
+}
+.faqSection .wrapper h1 {
+	text-align: center;
+}
+.accordion {
+	margin-top: 50px;
+	display: grid;
+	grid-template-columns: auto;
+	gap: 10px;
+}
+.accordionItem .accordionHeading {
+	cursor: pointer;
+	background-color: #303030;
+	border-bottom: 1px solid black;
+	display: flex;
+	padding: 22px 28px;
+	justify-content: space-between;
+	gap: 10px;
+	align-items: center;
+	user-select: none;
+}
+.accordionItem .accordionHeading h2 {
+	font-weight: 400;
+	font-size: 1.5rem;
+}
+.accordionItem .accordionBody {
+	padding: 22px 28px;
+	background-color: #303030;
+	font-size: 1.3rem;
+	display: grid;
+	grid-template-columns: auto;
+	gap: 27px;
+	color: #d1d1d1;
+}
+.plus {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.plus span {
+	display: inline-block;
+	height: 2px;
+	width: 19px;
+	background-color: white;
+	position: absolute;
+}
+.plus span:nth-child(2) {
+	transform: rotate(90deg);
+}
+.plusX {
+	transform: rotate(45deg);
+}
+
 @media (max-width: 1227px) {
 	.writtenSection h1,
 	.sideWaysIntro h1,
-	.watchEveryWhere h1 {
+	.watchEveryWhere h1,
+	.faqSection h1 {
 		font-size: 2.525rem;
 	}
 	.writtenSection h2,
@@ -227,7 +297,8 @@
 		margin-bottom: 17px;
 	}
 	.writtenSection h1,
-	.sideWaysIntro h1 {
+	.sideWaysIntro h1,
+	.faqSection h1 {
 		text-align: center;
 	}
 	.writtenSection h2,
@@ -240,18 +311,23 @@
 	.sideWaysIntro {
 		order: 0;
 	}
+	.faqSection .wrapper {
+		width: 100%;
+	}
 }
 
 @media (max-width: 767px) {
 	.enjoyTvSection,
 	.downloadSection,
-	.watchEveryWhere {
+	.watchEveryWhere,
+	.faqSection {
 		padding: 60px 25px;
 	}
 	.introWrapper h1,
 	.writtenSection h1,
 	.watchEveryWhere h1,
-	.sideWaysIntro h1 {
+	.sideWaysIntro h1,
+	.faqSection h1 {
 		font-size: 1.625rem !important;
 	}
 	.introWrapper h2,
@@ -274,9 +350,24 @@
 	.inputArea button[type="submit"] {
 		border-radius: 5px;
 	}
+	.accordionItem .accordionHeading h2 {
+		font-size: 1.2rem;
+	}
+	.accordionItem .accordionBody {
+		font-size: 1.1rem;
+	}
 }
 
 @media (max-width: 590px) {
+	.nav {
+		padding: 20px;
+	}
+	.enjoyTvSection,
+	.downloadSection,
+	.watchEveryWhere,
+	.faqSection {
+		padding: 60px 20px;
+	}
 	.introSection .introWrapper {
 		width: 100%;
 	}
@@ -305,6 +396,9 @@
 	.breakTxt {
 		display: none;
 	}
+	.faqSection {
+		padding: 70px 20px;
+	}
 }
 @media (max-width: 430px) {
 	.enjoyTvSection {
@@ -316,5 +410,12 @@
 	}
 	.tvVideo {
 		width: 196px;
+	}
+	.accordionItem .accordionHeading,
+	.accordionItem .accordionBody {
+		padding: 18px;
+	}
+	.plus span {
+		width: 13px;
 	}
 }

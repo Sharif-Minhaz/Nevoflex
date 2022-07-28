@@ -5,6 +5,7 @@ import Header from "../components/home/Header";
 import EnjoyTv from "../components/home/EnjoyTv";
 import ImageInfo from "../components/home/ImageInfo";
 import WatchEveryWhere from "../components/home/WatchEveryWhere";
+import FaqSection from "../components/home/FaqSection";
 
 const Home = () => {
 	const { assets, isSignedIn, plan } = useContext(DefaultContext);
@@ -24,6 +25,7 @@ const Home = () => {
 					them—free with your membership.
 				</h2>
 			</ImageInfo>
+			<FaqSection />
 		</div>
 	);
 };
