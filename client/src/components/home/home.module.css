@@ -266,6 +266,41 @@
 	transform: rotate(45deg);
 }
 
+/* footer section  */
+.footerSection {
+	padding: 60px 220px;
+}
+.footerSection p {
+	color: #737373;
+}
+.footerSection p a {
+	color: #737373;
+	text-decoration: none;
+	font-size: 17px;
+}
+.extraSpacing:first-child {
+	margin-bottom: 36px;
+}
+.extraSpacing:last-child {
+	font-size: 15px;
+	margin-top: 30px;
+}
+.footerSection .footerBox {
+	display: grid;
+	grid-template-columns: repeat(4, auto);
+	gap: 20px;
+}
+.footerSection .footerBox .links {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+.footerSection .footerBox .links a {
+	text-decoration: none;
+	color: #737373;
+	font-size: 14px;
+}
+
 @media (max-width: 1227px) {
 	.writtenSection h1,
 	.sideWaysIntro h1,
@@ -277,6 +312,9 @@
 	.sideWaysIntro h2,
 	.watchEveryWhere h2 {
 		font-size: 1.3rem;
+	}
+	.footerSection {
+		padding: 60px 100px;
 	}
 }
 
@@ -313,6 +351,9 @@
 	}
 	.faqSection .wrapper {
 		width: 100%;
+	}
+	.footerSection {
+		padding: 60px;
 	}
 }
 
@@ -356,6 +397,10 @@
 	.accordionItem .accordionBody {
 		font-size: 1.1rem;
 	}
+	.footerSection .footerBox {
+		grid-template-columns: repeat(2, auto);
+		gap: 40px;
+	}
 }
 
 @media (max-width: 590px) {
@@ -396,8 +441,8 @@
 	.breakTxt {
 		display: none;
 	}
-	.faqSection {
-		padding: 70px 20px;
+	.footerSection {
+		padding: 35px 30px;
 	}
 }
 @media (max-width: 430px) {
@@ -417,5 +462,9 @@
 	}
 	.plus span {
 		width: 13px;
+	}
+	.footerSection .footerBox {
+		grid-template-columns: auto;
+		gap: 30px;
 	}
 }

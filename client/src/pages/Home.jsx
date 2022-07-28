@@ -6,6 +6,7 @@ import EnjoyTv from "../components/home/EnjoyTv";
 import ImageInfo from "../components/home/ImageInfo";
 import WatchEveryWhere from "../components/home/WatchEveryWhere";
 import FaqSection from "../components/home/FaqSection";
+import Footer from "../components/home/Footer";
 
 const Home = () => {
 	const { assets, isSignedIn, plan } = useContext(DefaultContext);
@@ -26,6 +27,7 @@ const Home = () => {
 				</h2>
 			</ImageInfo>
 			<FaqSection />
+			<Footer backgroundColor="#000" />
 		</div>
 	);
 };
