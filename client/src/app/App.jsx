@@ -1,22 +1,12 @@
 import "./App.css";
-import React, { useState, useEffect } from "react";
-import { useFetch } from "../hooks/useFetch";
+import React from "react";
 import { BrowserRouter } from "react-router-dom";
-import Routers from "../routes/Routers";
-import { DefaultContext } from "../contexts/DefaultContext";
+import Base from "../components/Base";
 
 const App = () => {
-	// const [signedInInfo] = useFetch("http://localhost:8080");
-	const [assets] = useFetch("http://localhost:8080/assets");
-	const [data, setData] = useState({});
-	const [isSignedIn, setIsSignedIn] = useState(false);
-	const [plan, setPlan] = useState(false);
-
 	return (
 		<BrowserRouter>
-			<DefaultContext.Provider value={{assets, isSignedIn, plan}}>
-				<Routers />
-			</DefaultContext.Provider>
+			<Base />
 		</BrowserRouter>
 	);
 };
