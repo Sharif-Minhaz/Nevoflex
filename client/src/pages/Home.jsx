@@ -14,12 +14,12 @@ const Home = () => {
 		<div className={styles.headerSection}>
 			<Header assets={assets} isSignedIn={isSignedIn} plan={plan} />
 			<EnjoyTv assets={assets} />
-			<ImageInfo image={assets?.images?.[0]}>
+			<ImageInfo image={assets?.images?.downloadMovies}>
 				<h1>Download to watch offline.</h1>
 				<h2>Save your favorites easily and always have something to watch.</h2>
 			</ImageInfo>
 			<WatchEveryWhere />
-			<ImageInfo image={assets?.images?.[2]} width="100%">
+			<ImageInfo image={assets?.images?.kidsProfile} width="100%">
 				<h1>Profiles for kids.</h1>
 				<h2>
 					Send kids on adventures with their favorite characters in a space made just for

@@ -13,8 +13,13 @@ const EnjoyTv = ({ assets }) => {
 			</div>
 			<div className={styles.tvContainer}>
 				<div className={styles.tvBox}>
-					<video className={styles.tvVideo} autoPlay loop src={assets?.videos?.[0]}></video>
-					<img className={styles.tv} src={assets?.images?.[4]} alt="tv" />
+					<video
+						className={styles.tvVideo}
+						autoPlay
+						loop
+						src={assets?.videos?.tvVideo}
+					></video>
+					<img className={styles.tv} src={assets?.images?.tv} alt="tv" />
 				</div>
 			</div>
 		</div>

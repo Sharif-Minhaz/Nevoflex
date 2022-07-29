@@ -4,7 +4,10 @@ import SignInInput from "./SignInInput";
 
 const Header = ({ assets, isSignedIn, plan }) => {
 	return (
-		<div className={styles.header} style={{ backgroundImage: `url(${assets?.images?.[1]})` }}>
+		<div
+			className={styles.header}
+			style={{ backgroundImage: `url(${assets?.images?.mainBg})` }}
+		>
 			<div className={styles.wrapper}>
 				<nav className={styles.nav}>
 					<img src="/assets/logos/brand.png" alt="brand" />

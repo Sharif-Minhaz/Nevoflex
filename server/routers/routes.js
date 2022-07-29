@@ -1,9 +1,14 @@
 const assetsRoute = require("./assets.route");
+const authRoute = require("./auth.route");
 
 const routes = [
 	{
 		path: "/assets",
 		handler: assetsRoute,
+	},
+	{
+		path: "/auth",
+		handler: authRoute,
 	},
 ];
 
