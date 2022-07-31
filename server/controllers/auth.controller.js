@@ -7,9 +7,9 @@ exports.authGetController = (req, res, next) => {
 };
 
 exports.authSignUpPostController = async (req, res, next) => {
+	console.log("hello");
 	const { email, password } = req.body;
 	try {
-		const authenticated = verifyUser(req, res, next);
 		const user = await User.findOne({ email });
 		if (user) {
 			return res.json("Email already in use.");
@@ -22,13 +22,14 @@ exports.authSignUpPostController = async (req, res, next) => {
 		});
 		await newUser.save();
 		const token = jwt.sign(
-			{ user: { email: user.email } },
+			{ user: { email: newUser.email } },
 			process.env.JWT_SECRET,
 			{ expiresIn: "1h" } // 1 hour
 		);
 		res.cookie("auth", token, { httpOnly: true, maxAge: 3600000 }); // 1 hour
 		res.json({
 			isSignedIn: true,
+			signedInMail: email,
 		});
 	} catch (err) {
 		next(err);

@@ -6,8 +6,14 @@ import { DefaultContext } from "../contexts/DefaultContext";
 import FooterWhite from "../components/signin/FooterWhite";
 
 const SigninStep2 = () => {
-	const { handleMailInput, mail, isSignedIn, password, handlePassword } =
-		useContext(DefaultContext);
+	const {
+		handleMailInput,
+		mail,
+		isSignedIn,
+		password,
+		handlePassword,
+		handleSignupSubmit,
+	} = useContext(DefaultContext);
 
 	return (
 		<div className={styles.signin2Section}>
@@ -17,6 +23,7 @@ const SigninStep2 = () => {
 				mail={mail}
 				handlePassword={handlePassword}
 				password={password}
+				handleSignupSubmit={handleSignupSubmit}
 			/>
 			<FooterWhite />
 		</div>

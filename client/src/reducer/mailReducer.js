@@ -8,6 +8,8 @@ export const mailReducer = (state, action) => {
 			return { ...state, password: action.payload };
 		case "SIGNIN":
 			return { ...state };
+		case "GETMAIL":
+			return { ...state, primaryMail: action.payload };
 	}
 	return state;
 };

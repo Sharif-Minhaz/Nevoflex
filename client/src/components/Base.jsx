@@ -2,10 +2,12 @@ import React, { useState, useReducer } from "react";
 import { useFetch } from "../hooks/useFetch";
 import { useNavigate } from "react-router-dom";
 import Routers from "../routes/Routers";
+import axios from "axios";
 import { DefaultContext } from "../contexts/DefaultContext";
 import { mailReducer } from "../reducer/mailReducer";
 
 const initialState = {
+	primaryMail: "",
 	mail: "",
 	password: "",
 };
@@ -38,8 +40,21 @@ const Base = () => {
 		dispatch({ type: "JOINPASSWORD", payload: e.target.value });
 	};
 
-	const handleSigninSubmit = (e) => {
+	const handleSignupSubmit = (e) => {
 		e.preventDefault();
+		axios
+			.post("http://localhost:8080/auth/signup", {
+				email: mailInfo.mail,
+				password: mailInfo.password,
+			})
+			.then((response) => {
+				setIsSignedIn(response.data.isSignedIn);
+				dispatch({ type: "ATTACHMAIL", payload: response.data.signedInMail });
+				navigate("/signin3");
+			})
+			.catch((err) => {
+				console.error(err);
+			});
 	};
 
 	return (
@@ -51,10 +66,9 @@ const Base = () => {
 				mail: mailInfo.mail,
 				handleMailSubmit,
 				handleMailInput,
-				handleSigninSubmit,
 				password: mailInfo.password,
 				handlePassword,
-				handleSigninSubmit,
+				handleSignupSubmit,
 			}}
 		>
 			<Routers condition={mailInfo.mail} />

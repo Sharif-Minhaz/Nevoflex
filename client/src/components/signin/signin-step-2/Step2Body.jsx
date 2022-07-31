@@ -2,7 +2,7 @@ import React from "react";
 import styles from "../signin.module.css";
 import RedBtnLg from "../RedBtnLg";
 
-const Step2Body = ({ handleMailInput, mail, handleSigninSubmit, password, handlePassword }) => {
+const Step2Body = ({ handleMailInput, mail, handleSignupSubmit, password, handlePassword }) => {
 	return (
 		<section className={styles.step2Body}>
 			<div className={styles.contents2}>
@@ -10,7 +10,7 @@ const Step2Body = ({ handleMailInput, mail, handleSigninSubmit, password, handle
 				<h1>Create a password to start your membership</h1>
 				<p>Just a few more steps and you're done!</p>
 				<p>We hate paperwork, too.</p>
-				<form className={styles.signinForm} onSubmit={handleSigninSubmit}>
+				<form className={styles.signinForm} onSubmit={handleSignupSubmit}>
 					<input
 						onChange={handleMailInput}
 						value={mail}
@@ -27,9 +27,11 @@ const Step2Body = ({ handleMailInput, mail, handleSigninSubmit, password, handle
 					/>
 					<div className={styles.forbidCheckbox}>
 						<input type="checkbox" name="forbid" id="forbid" />
-						<label for="forbid">Please do not email me Netflix special offers.</label>
+						<label htmlFor="forbid">
+							Please do not email me Netflix special offers.
+						</label>
 					</div>
-					<RedBtnLg navigate="/signin2">Next</RedBtnLg>
+					<RedBtnLg>Next</RedBtnLg>
 				</form>
 			</div>
 		</section>
