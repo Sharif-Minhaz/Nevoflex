@@ -46,7 +46,7 @@ const Base = () => {
 				handleMailInput,
 			}}
 		>
-			<Routers />
+			<Routers condition={mailInfo.mail} />
 		</DefaultContext.Provider>
 	);
 };
