@@ -3,7 +3,11 @@ export const mailReducer = (state, action) => {
 		case "JOIN":
 			return { ...state, mail: action.payload };
 		case "SUBMIT":
-			return { ...state, primaryEmail: action.payload };
+			return state;
+		case "JOINPASSWORD":
+			return { ...state, password: action.payload };
+		case "SIGNIN":
+			return { ...state };
 	}
 	return state;
 };

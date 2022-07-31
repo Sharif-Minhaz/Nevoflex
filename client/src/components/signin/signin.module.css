@@ -20,7 +20,8 @@
 	cursor: pointer;
 }
 
-.step1Body {
+.step1Body,
+.step2Body {
 	max-height: calc(100vh - 80px);
 	min-height: 635px;
 	display: flex;
@@ -40,7 +41,8 @@
 	width: 250px;
 	margin-bottom: 35px;
 }
-.step1Body .contents h1 {
+.step1Body .contents h1,
+.step2Body .contents2 h1 {
 	font-weight: 700;
 	font-size: 32px;
 	margin: 8px 0px 20px 0px;
@@ -49,6 +51,48 @@
 	font-weight: 400;
 	font-size: 18px;
 	margin-bottom: 20px;
+}
+
+.step2Body .contents2 {
+	width: 440px;
+}
+.step2Body .contents2 p {
+	font-size: 18px;
+	margin-bottom: 10px;
+}
+.step2Body .contents2 p:nth-child(3) {
+	margin-top: -7px;
+}
+.step2Body .contents2 p:nth-child(4) {
+	margin-bottom: 13px;
+}
+
+.signinForm {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+.signinForm input {
+	box-shadow: none;
+	outline: none;
+	font-size: 16px;
+}
+.signinForm input:not(input[type="checkbox"]) {
+	height: 60px;
+	padding: 10px;
+}
+.signinForm input:focus {
+	border-color: blue;
+	border-radius: 3px;
+}
+.signinForm .forbidCheckbox {
+	margin: 8px 0px 25px 0px;
+	display: flex;
+	align-items: center;
+	gap: 6px;
+}
+.signinForm .forbidCheckbox input {
+	cursor: pointer;
 }
 
 .footerWhite {

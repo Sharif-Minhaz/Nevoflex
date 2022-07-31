@@ -13,7 +13,7 @@ const Step1Body = ({ assets }) => {
 					Netflix is personalized for you. Create a password to watch on any device at any
 					time.
 				</h2>
-				<RedBtnLg>Next</RedBtnLg>
+				<RedBtnLg navigate="/signin2">Next</RedBtnLg>
 			</div>
 		</section>
 	);

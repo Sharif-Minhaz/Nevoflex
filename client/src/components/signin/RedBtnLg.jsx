@@ -1,8 +1,14 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import styles from "./signin.module.css";
 
 const RedBtnLg = (props) => {
-	return <button className={styles.redBtnLg}>{props.children}</button>;
+	const navigate = useNavigate();
+	return (
+		<button onClick={() => navigate(props.navigate)} className={styles.redBtnLg}>
+			{props.children}
+		</button>
+	);
 };
 
 export default RedBtnLg;

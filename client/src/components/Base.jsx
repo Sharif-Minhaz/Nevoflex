@@ -6,8 +6,8 @@ import { DefaultContext } from "../contexts/DefaultContext";
 import { mailReducer } from "../reducer/mailReducer";
 
 const initialState = {
-	primaryEmail: "",
 	mail: "",
+	password: "",
 };
 
 const Base = () => {
@@ -24,14 +24,22 @@ const Base = () => {
 		dispatch({ type: "JOIN", payload: e.target.value });
 	};
 
-	const handlePrimaryEmailSubmit = (e) => {
+	const handleMailSubmit = (e) => {
 		e.preventDefault();
 		if (mailInfo.mail.length >= 5) {
-			dispatch({ type: "SUBMIT", payload: mailInfo.mail });
+			dispatch({ type: "SUBMIT" });
 			navigate("/signin1");
 		} else {
 			e.preventDefault();
 		}
+	};
+
+	const handlePassword = (e) => {
+		dispatch({ type: "JOINPASSWORD", payload: e.target.value });
+	};
+
+	const handleSigninSubmit = (e) => {
+		e.preventDefault();
 	};
 
 	return (
@@ -40,10 +48,13 @@ const Base = () => {
 				assets,
 				isSignedIn,
 				plan,
-				primaryEmail: mailInfo.primaryEmail,
 				mail: mailInfo.mail,
-				handlePrimaryEmailSubmit,
+				handleMailSubmit,
 				handleMailInput,
+				handleSigninSubmit,
+				password: mailInfo.password,
+				handlePassword,
+				handleSigninSubmit,
 			}}
 		>
 			<Routers condition={mailInfo.mail} />
